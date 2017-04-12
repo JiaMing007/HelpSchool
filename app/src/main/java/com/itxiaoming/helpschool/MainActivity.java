@@ -5,6 +5,9 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 import com.itxiaoming.helpschool.R;
 import com.itxiaoming.helpschool.user.login.LoginActivity;
@@ -12,12 +15,20 @@ import com.itxiaoming.helpschool.user.login.LoginActivity;
 
 public class MainActivity extends ActionBarActivity {
 
+    private Button btnTest;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
+        btnTest = (Button) findViewById(R.id.btn_test);
+        btnTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "这是用来测试git", Toast.LENGTH_SHORT).show();
+            }
+        });
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
