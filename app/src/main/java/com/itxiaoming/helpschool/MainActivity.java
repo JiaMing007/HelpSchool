@@ -32,7 +32,7 @@ public class MainActivity extends ActionBarActivity {
         btnTest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "这是用来测试git2", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "这是用来测试git3", Toast.LENGTH_SHORT).show();
             }
         });
         Intent intent = new Intent(this, LoginActivity.class);
