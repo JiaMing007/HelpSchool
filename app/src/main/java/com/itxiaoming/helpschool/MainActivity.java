@@ -29,6 +29,12 @@ public class MainActivity extends ActionBarActivity {
                 Toast.makeText(MainActivity.this, "这是用来测试git", Toast.LENGTH_SHORT).show();
             }
         });
+        btnTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "这是用来测试git2", Toast.LENGTH_SHORT).show();
+            }
+        });
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
